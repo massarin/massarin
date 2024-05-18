@@ -1,7 +1,7 @@
 ### Hi! I am,
 
-- ⭐ Astrophysicist, cosmologist, chess player, runner, coffee drinker.
-- 🔭 Interested in **Computational physics**, in particular N-body simulations of galaxy/large structure formation as well as **Artificial Intelligence**, and its use in the world of research.
+- Astrophysicist 🔭, cosmologist ☄️, chess player ♟️, runner 👟, coffee drinker ☕.
+- 🍀 Interested in **Computational physics**, in particular N-body simulations of galaxy/large structure formation as well as **Artificial Intelligence**, and its use in the world of research.
 
 <!--
 **nicmsri/nicmsri** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
