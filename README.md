@@ -1,4 +1,4 @@
-### Hi! I am Nicolò,
+# Hi! I am Nicolò,
 
 **Astrophysicist and Cosmologist ☄️ | Chess Player ♟️ | Runner 👟 | Coffee Enthusiast ☕**
 
@@ -17,10 +17,8 @@ I am passionate about **Computational Cosmology**, with a focus on galaxy and la
 ---
 
 #### 📚 Projects
-- **cosmogp**: Master thesis work on field-level inference of 2D weak lensing convergence fields using Gaussian processes.
-  - [Repository Link](https://github.com/nicmsri/cosmogp)
-- **mysliceofweb**: My tiny slice of _www_.
-  - [Repository Link](https://nicmsri.github.io/mysliceofweb/)
+- [**`cosmogp`**](https://github.com/nicmsri/cosmogp): Master thesis work on field-level inference of 2D weak lensing convergence fields using Gaussian processes.
+- [**`mysliceofweb`**](https://nicmsri.github.io/mysliceofweb/): My tiny slice of _www_.
 
 ---
 
