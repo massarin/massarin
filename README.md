@@ -18,7 +18,7 @@ I am passionate about **Computational Cosmology**, with a focus on galaxy and la
 
 #### 📚 Projects
 - [**`cosmogp`**](https://github.com/nicmsri/cosmogp): Master thesis work on field-level inference of 2D weak lensing convergence fields using Gaussian processes.
-- [**`mysliceofweb`**](https://nicmsri.github.io/mysliceofweb/): My tiny slice of _www_.
+- [**`personal website`**](https://nicmsri.github.io): My slice of web.
 
 ---
 
