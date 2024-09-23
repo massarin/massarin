@@ -5,14 +5,14 @@
 ---
 
 #### About Me
-I am passionate about **Computational Cosmology**, with a focus on galaxy and large structure formation simulations, as well as **Artificial Intelligence** applications in this field.
+I am a recent graduate with a master degree in physics and a background in computational methods and programming. ヽ(^o^)丿
 
 ---
 
 #### 🛠️ Skills
 - **Programming Languages**: Python, C++
-- **Web Development**: HTML, CSS, JavaScript
-- **Transversal Skills**: Linux, Git, VS Code
+- **Web Development**: HTML, CSS, JS
+- **Transversal toolkit**: Linux, Git, Wolfram Mathematica, Slurm, VS Code, Bash, OpenVPN, LATEX, Office, GIMP.
 
 ---
 
