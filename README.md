@@ -9,10 +9,10 @@ I am a recent graduate with a master degree in physics and a background in compu
 
 ---
 
-#### 🛠️ Programming
-- **Programming Languages**: Python, C++
-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Web Development**: HTML, JS
-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Tools**: Linux, Git, SSH, Mathematica, VS Code, LATEX, Auto CAD.
+#### 🛠️ Coding
+- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Programming**: Python, C++
+- **Web Development**: HTML, JS
+- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Tools**: Linux, Git, SSH, Mathematica, VS Code, LATEX, Auto CAD.
 
 ---
 
