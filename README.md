@@ -5,7 +5,7 @@
 ---
 
 #### About Me
-I am a recent graduate with a MSc in Cosmology and a background in computational methods and programming. ヽ(^o^)丿
+I am a recent graduate with a MSc in Cosmology and a background in computational methods and programming. ヽ(^^)丿
 
 ---
 
