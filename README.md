@@ -1,11 +1,11 @@
 # Hi! I am Nicolò,
 
-**Astrophysicist and Cosmologist ☄️ | Chess Player ♟️ | Runner 👟 | Coffee Enthusiast ☕**
+** Aspiring Researcher ☄️ | Computational Physicist :apple: | Simulations Enthusiast :floppy_disk:**
 
 ---
 
 #### About Me
-I am a recent graduate with a master degree in physics and a background in computational methods and programming. ヽ(^o^)丿
+I am a recent graduate with a MSc in Cosmology and a background in computational methods and programming. ヽ(^o^)丿
 
 ---
 
