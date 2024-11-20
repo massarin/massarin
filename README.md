@@ -1,6 +1,6 @@
 # Hi! I am Nicolò,
 
-** Aspiring Researcher ☄️ | Computational Physicist :apple: | Simulations Enthusiast :floppy_disk:**
+**Aspiring Researcher ☄️ | Computational Physicist :apple: | Simulations Enthusiast :floppy_disk:**
 
 ---
 
