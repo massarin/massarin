@@ -10,9 +10,9 @@ I am a recent graduate with a MSc in Cosmology and a background in computational
 ---
 
 #### 🛠️ Coding
-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Programming**: Python, C++
+- **Programming**: Python, C++
 - **Web Development**: HTML, JS
-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Tools**: Linux, Git, SSH, Mathematica, VS Code, LATEX, Auto CAD.
+- **Tools**: Linux, Git, SSH, Mathematica, VS Code, LATEX, Auto CAD.
 
 ---
 
