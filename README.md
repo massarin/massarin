@@ -1,7 +1,5 @@
 # Hi! I am Nicolò ☄️
 #### Aspiring Researcher  | Computational Physicist | Simulations Enthusiast
-
-## About Me
 A hitchhiker of the cosmos, with a background in computational methods and programming. ヽ^^丿
 
 ## Coding projects
