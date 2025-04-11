@@ -1,19 +1,10 @@
 # Hi! I am Nicolò ☄️
-##### Aspiring Researcher  | Computational Physicist | Simulations Enthusiast
+#### Aspiring Researcher  | Computational Physicist | Simulations Enthusiast
 
-#### About Me
+## About Me
 A hitchhiker of the cosmos, with a background in computational methods and programming. ヽ^^丿
 
----
-
-#### Coding
-- **Programming**: Python, C++
-- **Web Development**: HTML, JS
-- **Tools**: Linux, Git, SSH, Mathematica, VS Code, LATEX, Auto CAD.
-
----
-
-#### Projects
+## Coding projects
 - [**`cosmogp`**](https://github.com/massarin/cosmogp): Master thesis work on field-level inference of 2D weak lensing convergence fields using Gaussian processes.
 - [**`board_game`**](https://github.com/massarin/board_game): This project simulates the spread of an infectious disease using the SIR model on a grid-based system.
 - [**`personal website`**](https://massarin.org): My slice of web.
