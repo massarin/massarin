@@ -1,0 +1,130 @@
+name: Update README with GUGS
+on:
+  issues:
+    types: [opened]
+  schedule:
+    - cron: '0 */6 * * *' # Run every 6 hours
+  workflow_dispatch: # Allow manual triggering
+
+concurrency:
+  group: readme-update
+  cancel-in-progress: true # Cancel previous runs, use latest issue
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python with cache
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Cache GUGS installation
+        uses: actions/cache@v4
+        id: cache-gugs
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-gugs-${{ hashFiles('**/pyproject.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-gugs-
+
+      - name: Install GUGS
+        run: |
+          pip install git+https://github.com/massarin/gugs.git
+
+      - name: Get latest issue author username
+        id: get-username
+        uses: actions/github-script@v6
+        with:
+          script: |
+            if (context.eventName === 'issues') {
+              // For issue events, use the issue author
+              const username = context.payload.issue.user.login;
+              core.setOutput('username', username);
+              core.setOutput('issue_number', context.payload.issue.number);
+            } else {
+              // For scheduled runs, get the latest open issue
+              const { data: issues } = await github.rest.issues.listForRepo({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open',
+                sort: 'created',
+                direction: 'desc',
+                per_page: 100
+              });
+              
+              if (issues.length > 0) {
+                // Get the latest issue (first in the list due to desc sort)
+                const latestIssue = issues[0];
+                const username = latestIssue.user.login;
+                core.setOutput('username', username);
+                core.setOutput('issue_number', latestIssue.number);
+                core.setOutput('all_issues', JSON.stringify(issues.map(issue => issue.number)));
+              } else {
+                // Fallback if no issues
+                core.setOutput('username', 'massarin');
+                core.setOutput('issue_number', '');
+                core.setOutput('all_issues', '[]');
+              }
+            }
+
+      - name: Update README and generate GIF
+        run: |
+          python scripts/update_readme.py "${{ steps.get-username.outputs.username }}"
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md leaderboard.json assets/
+          git diff --staged --quiet || git commit -m "Update README with @${{ steps.get-username.outputs.username }}'s GUGS animation"
+          git push
+
+      - name: Comment on latest issue
+        if: steps.get-username.outputs.issue_number != ''
+        uses: actions/github-script@v6
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              issue_number: parseInt('${{ steps.get-username.outputs.issue_number }}'),
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '🎉 Thanks @${{ steps.get-username.outputs.username }}! Your username has been featured on the profile with a gravity simulation! Check out the [updated README](https://github.com/${{ github.repository }})!'
+            });
+
+      - name: Close all open issues
+        if: steps.get-username.outputs.issue_number != ''
+        uses: actions/github-script@v6
+        with:
+          script: |
+            if (context.eventName === 'issues') {
+              // For issue events, close the current issue
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.issue.number,
+                state: 'closed'
+              });
+            } else {
+              // For scheduled runs, close all open issues
+              const allIssues = JSON.parse('${{ steps.get-username.outputs.all_issues }}');
+              for (const issueNumber of allIssues) {
+                try {
+                  await github.rest.issues.update({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: issueNumber,
+                    state: 'closed'
+                  });
+                  console.log(`Closed issue #${issueNumber}`);
+                } catch (error) {
+                  console.log(`Failed to close issue #${issueNumber}: ${error.message}`);
+                }
+              }
+            }
