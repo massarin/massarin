@@ -1,5 +1,7 @@
 {
-  "leaderboard": {},
-  "current_user": null,
-  "last_updated": null
+  "leaderboard": {
+    "massarin": 1
+  },
+  "current_user": "massarin",
+  "last_updated": "2025-08-28T11:46:39.506930"
 }
