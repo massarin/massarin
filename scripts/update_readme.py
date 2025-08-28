@@ -116,7 +116,9 @@ def update_readme(data):
     last_updated = data.get("last_updated", datetime.now().isoformat())
     leaderboard_table = format_leaderboard(data)
     
-    gugs_content = f"""## 🎮 Interactive GitHub Profile
+    gugs_content = f"""## 🎮 Interact 👾
+
+An n-body gravity simulation that uses your username as initial conditions
 
 ### Current Featured User: @{current_user}
 
@@ -124,11 +126,11 @@ def update_readme(data):
 
 *Last updated: {last_updated}*
 
-### Want to be featured?
+### Want to play?
 
-Click here to create an issue and see your username in gravity simulation!
+➡️ **[Click here](https://github.com/massarin/massarin/issues/new?title=I%20wanna%20play!&body=Create%20my%20own%20unique%20GUGS.)**
+ to create an issue and see your own unique simulation!
 
-➡️ **[Create Your Issue](https://github.com/massarin/massarin/issues/new?title=Feature%20me!&body=I%20want%20to%20be%20featured%20on%20your%20profile!)**
 
 ### 🏆 Leaderboard
 
@@ -136,7 +138,7 @@ Click here to create an issue and see your username in gravity simulation!
 
 ---
 
-*This profile is powered by [GUGS](https://github.com/massarin/gugs) - GitHub Username Gravity Simulation*"""
+*powered by [GUGS](https://github.com/massarin/gugs)*"""
     
     # Find the positions of the markers
     start_pos = readme_content.find(start_marker)
