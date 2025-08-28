@@ -35,30 +35,31 @@ def update_leaderboard(username):
     return data
 
 def generate_gif(username):
-    gif_path = Path('assets/current_user.gif')
+    gif_path = Path('assets/gugs.gif')
     gif_path.parent.mkdir(exist_ok=True)
     
     try:
         result = subprocess.run(
-            ['gugs', username, '--reverse'],
+            ['gugs', username, '--reverse', '--output', str(gif_path)],
             capture_output=True,
             text=True,
             check=True
         )
         
-        generated_gif = Path(f'{username}.gif')
-        if generated_gif.exists():
-            generated_gif.rename(gif_path)
-            print(f"Generated GIF for {username}")
+        if gif_path.exists():
+            print(f"Generated GIF for {username} at {gif_path}")
             return True
+        else:
+            print(f"GIF file not found at expected location: {gif_path}")
+            return False
     except subprocess.CalledProcessError as e:
         print(f"Error generating GIF: {e}")
+        print(f"STDOUT: {e.stdout if hasattr(e, 'stdout') else 'N/A'}")
+        print(f"STDERR: {e.stderr if hasattr(e, 'stderr') else 'N/A'}")
         return False
     except Exception as e:
         print(f"Unexpected error: {e}")
         return False
-    
-    return False
 
 def format_leaderboard(data):
     if not data["leaderboard"]:
@@ -125,9 +126,9 @@ def update_readme(data):
 
 ### Want to be featured?
 
-➡️ **[Click here](https://github.com/massarin/massarin/issues/new?title=Feature%20me!&body=I%20want%20to%20be%20featured%20on%20your%20profile!)**
- to create an issue and see your username as the initial conditions of a gravity simulation!
+Click here to create an issue and see your username in gravity simulation!
 
+➡️ **[Create Your Issue](https://github.com/massarin/massarin/issues/new?title=Feature%20me!&body=I%20want%20to%20be%20featured%20on%20your%20profile!)**
 
 ### 🏆 Leaderboard
 
@@ -135,7 +136,7 @@ def update_readme(data):
 
 ---
 
-*This README is powered by [GUGS](https://github.com/massarin/gugs) - GitHub Username Gravity Simulation*"""
+*This profile is powered by [GUGS](https://github.com/massarin/gugs) - GitHub Username Gravity Simulation*"""
     
     # Find the positions of the markers
     start_pos = readme_content.find(start_marker)
