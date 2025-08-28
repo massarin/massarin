@@ -23,13 +23,25 @@ def save_leaderboard(data):
 
 def update_leaderboard(username):
     data = load_leaderboard()
+    current_time = datetime.now()
     
+    # Initialize user if not exists
     if username not in data["leaderboard"]:
         data["leaderboard"][username] = 0
     
-    data["leaderboard"][username] += 1
+    # If there's a previous update, calculate time elapsed and add to current user
+    if data.get("last_updated") and data.get("current_user"):
+        last_time = datetime.fromisoformat(data["last_updated"])
+        elapsed_minutes = int((current_time - last_time).total_seconds() / 60)
+        
+        # Add elapsed time to the current user (before switching)
+        current_user = data["current_user"]
+        if current_user in data["leaderboard"]:
+            data["leaderboard"][current_user] += elapsed_minutes
+    
+    # Update current user and timestamp
     data["current_user"] = username
-    data["last_updated"] = datetime.now().isoformat()
+    data["last_updated"] = current_time.isoformat()
     
     save_leaderboard(data)
     return data
@@ -61,6 +73,25 @@ def generate_gif(username):
         print(f"Unexpected error: {e}")
         return False
 
+def format_time(minutes):
+    """Convert minutes to a human-readable format"""
+    if minutes < 60:
+        return f"{minutes}m"
+    elif minutes < 1440:  # less than 24 hours
+        hours = minutes // 60
+        remaining_minutes = minutes % 60
+        return f"{hours}h {remaining_minutes}m" if remaining_minutes > 0 else f"{hours}h"
+    else:  # days
+        days = minutes // 1440
+        remaining_hours = (minutes % 1440) // 60
+        remaining_minutes = minutes % 60
+        result = f"{days}d"
+        if remaining_hours > 0:
+            result += f" {remaining_hours}h"
+        if remaining_minutes > 0:
+            result += f" {remaining_minutes}m"
+        return result
+
 def format_leaderboard(data):
     if not data["leaderboard"]:
         return "No participants yet!"
@@ -71,10 +102,10 @@ def format_leaderboard(data):
         reverse=True
     )
     
-    table = "| Rank | User | Display Count |\n"
-    table += "|------|------|---------------|\n"
+    table = "| Rank | User | Time |\n"
+    table += "|------|------|------------|\n"
     
-    for i, (user, count) in enumerate(sorted_users[:10], 1):
+    for i, (user, minutes) in enumerate(sorted_users[:10], 1):
         medal = ""
         if i == 1:
             medal = "🥇 "
@@ -83,7 +114,8 @@ def format_leaderboard(data):
         elif i == 3:
             medal = "🥉 "
         
-        table += f"| {medal}{i} | @{user} | {count} |\n"
+        formatted_time = format_time(minutes)
+        table += f"| {medal}{i} | @{user} | {formatted_time} |\n"
     
     return table
 
