@@ -19,18 +19,21 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Download GUGS pyproject.toml for caching
+        run: |
+          curl -o pyproject.toml https://raw.githubusercontent.com/massarin/gugs/refs/heads/main/pyproject.toml
+
       - name: Set up Python with cache
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
           cache: 'pip'
 
-      - name: Cache GUGS installation
+      - name: Cache pip dependencies
         uses: actions/cache@v4
-        id: cache-gugs
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-gugs-${{ hashFiles('**/pyproject.toml') }}
+          key: ${{ runner.os }}-gugs-${{ hashFiles('pyproject.toml') }}
           restore-keys: |
             ${{ runner.os }}-gugs-
 
