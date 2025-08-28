@@ -6,30 +6,32 @@ A hitchhiker of the cosmos, with a background in computational methods and progr
 
 <!-- GUGS_START -->
 
-## 🎮 Interactive GitHub Profile
+## 🎮 Interact 👾
+
+An n-body gravity simulation that uses your username as initial conditions
 
 ### Current Featured User: @massarin
 
 ![massarin GIF](assets/gugs.gif)
 
-*Last updated: 2025-08-28T12:04:33.260848*
+*Last updated: 2025-08-28T12:32:46.563674*
 
-### Want to be featured?
+### Want to play?
 
-Click here to create an issue and see your username in gravity simulation!
+➡️ **[Click here](https://github.com/massarin/massarin/issues/new?title=I%20wanna%20play!&body=Create%20my%20own%20unique%20GUGS.)**
+ to create an issue and see your own unique simulation!
 
-➡️ **[Create Your Issue](https://github.com/massarin/massarin/issues/new?title=Feature%20me!&body=I%20want%20to%20be%20featured%20on%20your%20profile!)**
 
 ### 🏆 Leaderboard
 
 | Rank | User | Display Count |
 |------|------|---------------|
-| 🥇 1 | @massarin | 3 |
+| 🥇 1 | @massarin | 4 |
 
 
 ---
 
-*This profile is powered by [GUGS](https://github.com/massarin/gugs) - GitHub Username Gravity Simulation*
+*powered by [GUGS](https://github.com/massarin/gugs)*
 
 <!-- GUGS_END -->
 
