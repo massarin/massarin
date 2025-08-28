@@ -120,7 +120,7 @@ def update_readme(data):
 
 ### Current Featured User: @{current_user}
 
-![Current User GIF](assets/current_user.gif)
+![{current_user} GIF](assets/gugs.gif)
 
 *Last updated: {last_updated}*
 
