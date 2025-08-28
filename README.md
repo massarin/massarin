@@ -10,9 +10,9 @@ A hitchhiker of the cosmos, with a background in computational methods and progr
 
 ### Current Featured User: @massarin
 
-![Current User GIF](assets/current_user.gif)
+![massarin GIF](assets/gugs.gif)
 
-*Last updated: 2025-08-28T12:00:22.519585*
+*Last updated: 2025-08-28T12:04:33.260848*
 
 ### Want to be featured?
 
@@ -24,7 +24,7 @@ Click here to create an issue and see your username in gravity simulation!
 
 | Rank | User | Display Count |
 |------|------|---------------|
-| 🥇 1 | @massarin | 2 |
+| 🥇 1 | @massarin | 3 |
 
 
 ---
