@@ -14,7 +14,7 @@ An n-body gravity simulation that uses your username as initial conditions
 
 ![massarin GIF](assets/gugs.gif)
 
-*Last updated: 2025-09-01T06:22:50.542960*
+*Last updated: 2025-09-01T12:28:34.827142*
 
 ### Want to play?
 
@@ -26,7 +26,7 @@ An n-body gravity simulation that uses your username as initial conditions
 
 | Rank | User | Time |
 |------|------|------------|
-| 🥇 1 | @massarin | 3d 17h 47m |
+| 🥇 1 | @massarin | 3d 23h 52m |
 
 
 ---
