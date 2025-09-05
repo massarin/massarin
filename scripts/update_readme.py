@@ -102,20 +102,20 @@ def format_leaderboard(data):
         reverse=True
     )
     
-    table = "| Rank | User | Time |\n"
-    table += "|------|------|------------|\n"
+    table = "| User | Time |\n"
+    table += "|------|------------|\n"
     
     for i, (user, minutes) in enumerate(sorted_users[:10], 1):
-        medal = ""
-        if i == 1:
-            medal = "🥇 "
-        elif i == 2:
-            medal = "🥈 "
-        elif i == 3:
-            medal = "🥉 "
+        #medal = ""
+        #if i == 1:
+        #    medal = "🥇 "
+        #elif i == 2:
+        #    medal = "🥈 "
+        #elif i == 3:
+        #    medal = "🥉 "
         
         formatted_time = format_time(minutes)
-        table += f"| {medal}{i} | @{user} | {formatted_time} |\n"
+        table += f"| @{user} | {formatted_time} |\n"
     
     return table
 
@@ -148,29 +148,15 @@ def update_readme(data):
     last_updated = data.get("last_updated", datetime.now().isoformat())
     leaderboard_table = format_leaderboard(data)
     
-    gugs_content = f"""## 🎮 Interact 👾
+    gugs_content = f"""![{current_user}'s GIF](assets/gugs.gif)
 
-An n-body gravity simulation that uses your username as initial conditions
+*Current User: @{current_user} | Last update: {last_updated}*
 
-### Current Featured User: @{current_user}
-
-![{current_user} GIF](assets/gugs.gif)
-
-*Last updated: {last_updated}*
-
-### Want to play?
-
-➡️ **[Click here](https://github.com/massarin/massarin/issues/new?title=I%20wanna%20play!&body=Create%20my%20own%20unique%20GUGS.)**
- to create an issue and see your own unique simulation!
-
-
-### 🏆 Leaderboard
+➡️ *[Want to be up there?](https://github.com/massarin/massarin/issues/new?title=GUGS%20simulation%20request.&body=Use%20my%20github%20username%20as%20initial%20conditions%20to%20an%20n-body%20simulation!)* [^2]
 
 {leaderboard_table}
 
----
-
-*powered by [GUGS](https://github.com/massarin/gugs)*"""
+"""
     
     # Find the positions of the markers
     start_pos = readme_content.find(start_marker)
