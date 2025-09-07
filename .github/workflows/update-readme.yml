@@ -70,10 +70,19 @@ jobs:
                 core.setOutput('issue_number', latestIssue.number);
                 core.setOutput('all_issues', JSON.stringify(issues.map(issue => issue.number)));
               } else {
-                // Fallback if no issues
-                core.setOutput('username', 'massarin');
-                core.setOutput('issue_number', '');
-                core.setOutput('all_issues', '[]');
+                // Fallback: read current_user from leaderboard.json
+                const fs = require('fs');
+                try {
+                  const leaderboard = JSON.parse(fs.readFileSync('leaderboard.json', 'utf8'));
+                  const username = leaderboard.current_user || 'massarin';
+                  core.setOutput('username', username);
+                  core.setOutput('issue_number', '');
+                  core.setOutput('all_issues', '[]');
+                } catch (error) {
+                  core.setOutput('username', 'massarin');
+                  core.setOutput('issue_number', '');
+                  core.setOutput('all_issues', '[]');
+                }
               }
             }
 
