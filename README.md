@@ -28,13 +28,13 @@ A hitchhiker of the cosmos, with a background in computational methods and progr
 
 ![massarin's GIF](assets/gugs.gif)
 
-*Current User: @massarin | Last update: 2025-09-11T06:20:43.579642*
+*Current User: @massarin | Last update: 2025-09-11T12:26:08.670270*
 
 ➡️ *[Want to be up there?](https://github.com/massarin/massarin/issues/new?title=GUGS%20simulation%20request.&body=Use%20my%20github%20username%20as%20initial%20conditions%20to%20an%20n-body%20simulation!)* [^2]
 
 | User | Time |
 |------|------------|
-| @massarin | 13d 16h 54m |
+| @massarin | 13d 22h 59m |
 | @bonschorno | 31m |
 
 
