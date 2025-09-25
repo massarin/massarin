@@ -95,7 +95,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md leaderboard.json assets/
-          git diff --staged --quiet || git commit -m "Update README with @${{ steps.get-username.outputs.username }}'s GUGS animation"
+          git diff --staged --quiet || git commit -m "Update README with ${{ steps.get-username.outputs.username }}'s GUGS animation"
           git push
 
       - name: Comment on latest issue
