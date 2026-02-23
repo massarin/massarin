@@ -3,7 +3,7 @@ on:
   issues:
     types: [opened]
   schedule:
-    - cron: '0 */6 * * *' # Run every 6 hours
+    - cron: '0 */24 * * *'
   workflow_dispatch: # Allow manual triggering
 
 concurrency:
