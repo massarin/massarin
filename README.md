@@ -28,13 +28,13 @@ A hitchhiker of the cosmos, with a background in computational methods and progr
 
 ![larnsce's GIF](assets/gugs.gif)
 
-*Current User: @larnsce | Last update: 2026-08-28T10:23:57.559281*
+*Current User: @larnsce | Last update: 2026-08-29T06:23:55.534196*
 
 ➡️ *[Want to be up there?](https://github.com/massarin/massarin/issues/new?title=GUGS%20simulation%20request.&body=Use%20my%20github%20username%20as%20initial%20conditions%20to%20an%20n-body%20simulation!)* [^2]
 
 | User | Time |
 |------|------------|
-| @larnsce | 344d 17h 58m |
+| @larnsce | 345d 13h 57m |
 | @massarin | 19d 19h 45m |
 | @bonschorno | 31m |
 
