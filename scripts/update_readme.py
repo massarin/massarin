@@ -152,7 +152,7 @@ def update_readme(data):
 
 *Current User: @{current_user} | Last update: {last_updated}*
 
-➡️ *[Want to be up there?](https://github.com/massarin/massarin/issues/new?title=GUGS%20simulation%20request.&body=Use%20my%20github%20username%20as%20initial%20conditions%20to%20an%20n-body%20simulation!)* [^2]
+➡️ *[Click to giphy your username](https://github.com/massarin/massarin/issues/new?title=GUGS%20simulation%20request.&body=Use%20my%20github%20username%20as%20initial%20conditions%20to%20an%20n-body%20simulation!)* [^2]
 
 {leaderboard_table}
 
